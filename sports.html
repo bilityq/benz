@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>mercedes-benz</title>
+	<style>
+		.slide-container{
+			position: relative;
+		}
+		.slide img{
+			width: 100%;
+			height: 600px;
+		}
+		.effect{
+			animation-name: effect;
+			animation-duration: 1s;
+		}
+		@keyframes effect{
+			from{
+				opacity: 0.6;
+			}
+			to{
+				opacity: 1;
+			}
+		}
+		.dot-container{
+			text-align: center;
+		}
+		span{
+			border-radius: 50%;
+			height: 15px;
+			width: 15px;
+			background-color: blue;
+			display: inline-block;
+		}
+		.active{
+			background-color: red;
+		}
+	</style>
+</head>
+
+<body>
+<div id="container">
+	<header>
+		<div id="left_header">
+			<img  src="">
+			<h1>The mercedes-Benz</h1>
+
+		</div>
+		<nav id="right_header">
+			<ul>
+				<li><a href="index.html" style="text-decoration: none;">Home</a></li>
+				<li><a href="Vehicles.html"  style="text-decoration: none;">Vehicles</a></li>
+				<li><a href="About_us.html"  style="text-decoration: none;">About us</a></li>
+				<li><a href="Sports.html"  style="text-decoration: none;">Sports</a></li>
+				<li><a href="Contact_us.html"  style="text-decoration: none;">Contact us</a></li>
+			</ul>
+		</nav>
+		<div class="clearfix"></div>
+	</header>
+	<div class="slide-container">
+		<div class="effect slide">
+			<img src="uu.jpg">
+		</div>
+		<!--<div class="effect slide">
+			<img src="ww.jpg">
+		</div>
+		<div class="effect slide">
+			<img src="w.jpg">
+		</div>
+		<div class="effect slide">
+			<img src="x.jpg">
+		</div>
+		<div class="effect slide">
+			<img src="03.jpg">
+		</div>
+	</div>
+	<div class="dot-container">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>-->
+	<main>
+		<section class="first_section">
+			<h2>sports</h2><hr>
+			<article class="margin_left">
+				<img width="20" height="170" src="w.jpg">
+				<div class="article_title"> Golf</div>
+				<div class="article_description"> For more than 30 years Mercedes-Benz has supported golf around the world, from partnering with the most prestigious majors, tournaments and players in the professional game to engaging amateurs in the largest global invitational series, the MercedesTrophy. Mercedes-Benz is a Global Sponsor of the Masters, the most prestigious major, and Official Patron of The Open, the most traditional yet innovative major. Furthermore, Mercedes-Benz supports numerous professional tournaments on the different tours throughout the world. </div>
+			</article>
+			<article class="margin_left">
+				<img width="20" height="170" src="xxx.jpg">
+				<div class="article_title"> Formula E</div> 
+			
+				<div class="article_description">Max Verstappen told his team he was in no mood to drive “like a grandma” when Red Bull asked him to manage his tyres as he hunted down the two Mercedes in the 70th Anniversary Grand Prix. He kept the pressure on – and went on to clinch a sensational win. His boss Christian Horner was suitably impressed with his performance, quipping “his grandma must drive quickly”…After an inspired and brave decision to qualify on the hard compound tyre, allowing him to start the race on that tyre while everyone else in the top 10 was on the mediums</div>
+ 
+			</article>
+			<article class="margin_left">
+				<img width="20" height="170" src="pppp.jpg">
+				<div class="article_title">Football</div>
+				<div class="article_description"> Football (or soccer as the game is called in some parts of the world) has a long history. Football in its current form arose in England in the middle of the 19th century. But alternative versions of the game existed much earlier and are a part of the football history.The first known examples of a team game involving a ball, which was made out of a rock, occurred in old Mesoamerican cultures for over 3,000 years ago. According to the sources, the ball would symbolize the sun and the captain of the losing team would be sacrificed to the gods. 
+ </div>
+			</article>
+			<article class="margin_left">
+				<img width="20" height="170" src="aaaa.jpg">
+				<div class="article_title">eSport</div>
+				<div class="article_description"> eSports is a rapidly growing field, constantly creating and improving its own world and ecosystem. Millions of people all over the world are participating in eSports on‐ and offline. As a pioneer, Mercedes-Benz is embarking on an exciting journey and is helping to shape a promising future in the field of eSports. The brand’s engagement in eSports began in 2017 when it became partner of ESL, one of the largest eSports companies in the world and was deepened in October 2018 when it became the global ESL mobility partner.  </div>
+			</article>
+		</section>
+	</main>
+	<footer>
+		<div class="left_footer">This is the international website of Mercedes-Benz AG.Visitors from the u.s, please visit our u.s website www.wbusa.com</div>
+		<nav class="right_footer">
+			<ul>
+				<li>provider</li>
+				<li>legal Notice</li>
+				<li>Cookies</li>
+				<li>Privacy statement</li>
+				<li>Newfeed(RSS)</li>
+				<li>Contact Careers</li>
+				<li>Investor Relations</li>
+				<li>Daimler AG</li>
+				<div class="clearfix"></div>
+			</ul>
+		</nav>
+		<div class="clearfix"></div>
+
+	</footer>
+</div>
+<script>
+var index = 0;
+show();
+function show(){
+	var i;
+	var slides=document.getElementsByClassName("slide");
+	var dots=document.getElementsByTagName("span");
+	for(i=0; i<slides.length; i++){
+		slides[i].style.display=" none";
+	}
+
+	index=index+1;
+	if (index>slides.length) {
+		index=1;
+	}
+	for(i=0;i<dots.length;i++){
+		dots[i].className=dots[i].className.replace(" active","");
+	}
+	
+	slides[index-1].style.display="block";
+	dots[index-1].className+=" active";
+	setTimeout(show,3000);
+}
+</script>
+</body>
+</html>

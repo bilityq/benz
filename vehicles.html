@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>mercedes-benz</title>
+	<style>
+		.slide-container{
+			position: relative;
+		}
+		.slide img{
+			width: 100%;
+			height: 600px;
+		}
+		.effect{
+			animation-name: effect;
+			animation-duration: 1s;
+		}
+		@keyframes effect{
+			from{
+				opacity: 0.6;
+			}
+			to{
+				opacity: 1;
+			}
+		}
+		.dot-container{
+			text-align: center;
+		}
+		span{
+			border-radius: 50%;
+			height: 15px;
+			width: 15px;
+			background-color: blue;
+			display: inline-block;
+		}
+		.active{
+			background-color: red;
+		}
+	</style>
+</head>
+
+<body>
+<div id="container">
+	<header>
+		<div id="left_header">
+			<img src="">
+			<h1 class="mercedes_benz">The mercedes-Benz</h1>
+		</div>
+		<nav id="right_header">
+			<ul>
+				<li><a href="index.html" style="text-decoration: none;">Home</a></li>
+				<li><a href="Vehicles.html"  style="text-decoration: none;">Vehicles</a></li>
+				<li><a href="About_us.html"  style="text-decoration: none;">About us</a></li>
+				<li><a href="Sports.html"  style="text-decoration: none;">Sports</a></li>
+				<li><a href="Contact_us.html"  style="text-decoration: none;">Contact us</a></li>
+			</ul>
+		</nav>
+		<div class="clearfix"></div>
+	</header>
+	<div class="slide-container">
+		<div class="effect slide">
+			<img src="15.jpg">
+		</div>
+		<!--<div class="effect slide">
+			<img src="16.jpg">
+		</div>
+		<div class="effect slide">
+			<img src="14.jpg">
+		</div>
+		<div class="effect slide">
+			<img src="book.jpg">
+		</div>
+		<div class="effect slide">
+			<img src="01.jpg">
+		</div>
+	</div>
+	<div class="dot-container">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>-->
+	<main>
+      <section class="first_section">
+			<h2>vehicles</h2><hr>
+			<article class="margin_left">
+				<img src="a.jpg">
+				<div class="article_title">A-class</div> 
+			</article>
+			<article class="margin_left">
+				<img src="b.jpg">
+				<div class="article_title">B-class</div> 
+			</article>
+			<article class="margin_left">
+				<img src="c.jpg">
+				<div class="article_title">C-class</div> 
+			</article>
+			<article class="margin_left">
+				<img src="d.jpg">
+				<div class="article_title">CLA</div> 
+			</article>
+			<article class="margin_left">
+				<img src="e.jpg">
+				<div class="article_title">CLS</div> 
+			</article>
+			<article class="margin_left">
+				<img src="f.jpg">
+				<div class="article_title">E-class</div> 
+			</article>
+			<article class="margin_left">
+				<img src="g.jpg">
+				<div class="article_title">EQC</div> 
+			</article>
+			<article class="margin_left">
+				<img src="h.jpg">
+				<div class="article_title">G-class</div> 
+			</article>
+			<article class="margin_left">
+				<img src="i.jpg">
+				<div class="article_title">GLA</div> 
+			</article>
+			<article class="margin_left">
+				<img src="j.jpg">
+				<div class="article_title">GLB</div> 
+			</article>
+			<article class="margin_left">
+				<img src="k.jpg">
+				<div class="article_title">GLC</div> 
+			</article>
+			<article class="margin_left">
+				<img src="l.jpg">
+				<div class="article_title">GLE</div> 
+			</article>
+			<article class="margin_left">
+				<img src="m.jpg">
+				<div class="article_title">GLS</div> 
+			</article>
+			<article class="margin_left">
+				<img src="o.jpg">
+				<div class="article_title">S-class</div> 
+			</article>
+			<article class="margin_left">
+				<img src="s.jpg">
+				<div class="article_title">SL</div> 
+			</article>
+			<article class="margin_left">
+				<img src="r.jpg">
+				<div class="article_title">SLC</div> 
+			</article>
+			<article class="margin_left">
+				<img src="t.jpg">
+				<div class="article_title">V-class</div> 
+			</article>
+			<article class="margin_left">
+				<img src="r.jpg">
+				<div class="article_title">AMG GT</div> 
+			</article>
+			<article class="margin_left">
+				<img src="n.jpg">
+				<div class="article_title">Mercedes-Maybach</div> 
+			</article>
+			<article class="margin_left">
+				<img src="r.jpg">
+				<div class="article_title">D-class</div> 
+			</article>
+    </section>
+	</main>
+</div>
+<footer>
+		<div class="left_footer">This is the international website of Mercedes-Benz AG.Visitors from the u.s, please visit our u.s website www.wbusa.com</div>
+		<nav class="right_footer">
+			<ul>
+				<li>provider</li>
+				<li>legal Notice</li>
+				<li>Cookies</li>
+				<li>Privacy statement</li>
+				<li>Newfeed(RSS)</li>
+				<li>Contact Careers</li>
+				<li>Investor Relations</li>
+				<li>Daimler AG</li>
+				<div class="clearfix"></div>
+			</ul>
+		</nav>
+		<div class="clearfix"></div>
+	</footer>
+
+	<script>
+var index = 0;
+show();
+function show(){
+	var i;
+	var slides=document.getElementsByClassName("slide");
+	var dots=document.getElementsByTagName("span");
+	for(i=0; i<slides.length; i++){
+		slides[i].style.display=" none";
+	}
+
+	index=index+1;
+	if (index>slides.length) {
+		index=1;
+	}
+	for(i=0;i<dots.length;i++){
+		dots[i].className=dots[i].className.replace(" active","");
+	}
+	
+	slides[index-1].style.display="block";
+	dots[index-1].className+=" active";
+	setTimeout(show,3000);
+}
+</script>
+</body>
+</html>

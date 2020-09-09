@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="script.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>mercedes-benz</title>
+	<style>
+		.slide-container{
+			position: relative;
+		}
+		.slide img{
+			width: 100%;
+			height: 600px;
+		}
+		.effect{
+			animation-name: effect;
+			animation-duration: 1s;
+		}
+		@keyframes effect{
+			from{
+				opacity: 0.6;
+			}
+			to{
+				opacity: 1;
+			}
+		}
+		.dot-container{
+			text-align: center;
+		}
+		span{
+			border-radius: 50%;
+			height: 15px;
+			width: 15px;
+			background-color: blue;
+			display: inline-block;
+		}
+		.active{
+			background-color: red;
+		}
+	</style>
+</head>
+
+<body>
+
+<div id="container">
+	<header>
+		<div id="left_header">
+			<img  src="">
+			<h1>The mercedes-Benz</h1>
+
+		</div>
+		<nav id="right_header">
+			<ul>
+				<li><a href="index.html" style="text-decoration: none;">Home</a></li>
+				<li><a href="Vehicles.html" style="text-decoration: none;">Vehicles</a></li>
+				<li><a href="About_us.html"  style="text-decoration: none;">About us</a></li>
+				<li><a href="Sports.html"  style="text-decoration: none;">Sports</a></li>
+				<li><a href="Contact_us.html"  style="text-decoration: none;">Contact us</a></li>
+			</ul>
+		</nav>
+		<div class="clearfix"></div>
+	</header>
+	<div class="slide-container">
+		<div class="effect slide">
+			<img src="qq.jpg">
+		</div>
+	<main>
+		<div class="wrapper">
+	<h2>Contact us</h2><hr>
+	<div id="error_message"></div>
+
+	<form id="myform" onsubmit="return validation()">
+		<div class="input_field">
+			<input type="text" placeholder="Please insert your name" id="name" >
+		</div>
+		<div class="input_field">
+			<input type="text" placeholder="Please insert your Subject" id="Subject">
+		</div>
+		<div class="input_field">
+			<input type="text" placeholder="Please insert your Phone" id="Phone" >
+		</div>
+		<div class="input_field">
+			<input type="text" placeholder="Please insert your email" id="email">
+		</div>
+		<div class="input_field">
+			<textarea id="message" placeholder="Please insert your message"></textarea>
+		</div>
+		<div class="btn">
+			<input type="submit">
+		</div>
+	</form>
+</div>
+
+	</main>
+	<footer>
+		<div class="left_footer">This is the international website of Mercedes-Benz AG.Visitors from the u.s, please visit our u.s website www.wbusa.com</div>
+		<nav class="right_footer">
+			<ul>
+				<li>provider</li>
+				<li>legal Notice</li>
+				<li>Cookies</li>
+				<li>Privacy statement</li>
+				<li>Newfeed(RSS)</li>
+				<li>Contact Careers</li>
+				<li>Investor Relations</li>
+				<li>Daimler AG</li>
+				<div class="clearfix"></div>
+			</ul>
+		</nav>
+		<div class="clearfix"></div>
+
+	</footer>
+</div>
+<script>
+/*var index = 0;
+show();
+function show(){
+	var i;
+	var slides=document.getElementsByClassName("slide");
+	var dots=document.getElementsByTagName("span");
+	for(i=0; i<slides.length; i++){
+		slides[i].style.display=" none";
+	}
+
+	index=index+1;
+	if (index>slides.length) {
+		index=1;
+	}
+	for(i=0;i<dots.length;i++){
+		dots[i].className=dots[i].className.replace(" active","");
+	}
+	
+	slides[index-1].style.display="block";
+	dots[index-1].className+=" active";
+	setTimeout(show,3000);
+}*/
+</script>
+</body>
+</html>
